@@ -3,8 +3,39 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-        reverseList();
+        triangleBuild();
     }
+
+    public static void triangleBuild(){
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Enter side A");
+        int sideA = scanner.nextInt();
+        System.out.println("Enter side B");
+        int sideB = scanner.nextInt();
+        System.out.println("Enter side C");
+        int sideC = scanner.nextInt();
+
+        int sumOfSides = sideA + sideB + sideC;
+        if(sumOfSides != 180){
+            System.out.println("The triangle cannot be built");
+        } else if (sideA == 60 && sideB == 60 && sideC == 60) {
+            System.out.println("The triangle's type is Equilateral");
+        } else if (sideA == sideB || sideA == sideC || sideB == sideC) {
+            System.out.println("The triangle's type is Isosceles");
+        } else if(sideA == 90 && sideB == 90 && sideC == 90){
+            System.out.println("The triangle's type is Right-Angled");
+        }
+        else if(sideA < 90 && sideB < 90 && sideC < 90){
+            System.out.println("The triangle's type is Acute");
+        }  else if (sideA > 90 && sideB > 90 && sideC > 90) {
+            System.out.println("The triangle's type is Obtuse");
+        }  else {
+            System.out.println("The triangle's type is Multifaceted");
+        }
+
+
+    }
+
     public static void daysOfTheWeekBasedOnNumber(){
         Scanner scanner = new Scanner(System.in);
         System.out.println("Enter a number from 1 to 7");
