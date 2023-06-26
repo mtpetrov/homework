@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class Circle extends Shape{
     @Override
-    double getArea(double radius) {
+    public Double getArea(Double radius) {
         Scanner scanner = new Scanner(System.in);
         radius = scanner.nextDouble();
 
@@ -12,7 +12,7 @@ public class Circle extends Shape{
     }
 
     @Override
-    double getPerimeter(double radius) {
+    public Double getPerimeter(Double radius) {
         Scanner scanner = new Scanner(System.in);
         radius = scanner.nextDouble();
         return 2 * Math.PI * radius;

@@ -4,14 +4,14 @@ import java.util.Scanner;
 
 public class Square extends Shape{
     @Override
-    double getArea(double sideLength) {
+    public Double getArea(Double sideLength) {
 Scanner scanner = new Scanner(System.in);
 sideLength = scanner.nextDouble();
 return sideLength * sideLength;
     }
 
     @Override
-    double getPerimeter(double sideLength) {
+    public Double getPerimeter(Double sideLength) {
         Scanner scanner = new Scanner(System.in);
         sideLength = scanner.nextDouble();
         return 4 * sideLength;
