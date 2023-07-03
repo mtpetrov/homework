@@ -4,13 +4,17 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-        sumOfTheDiagonal();
+        validatePalindrome();
     }
     public static void sumOfArray(){
-        int[] array = {1, 10, 20, 30};
-        int sumOfArray = array[0] + array[1] + array[2] + array[3];
-        System.out.println(sumOfArray);
-    }
+        int [] array = new int [] {1, 10, 20, 30};
+        int sum = 0;
+        for (int i = 0; i < array.length; i++) {
+            sum = sum + array[i];
+        }
+        System.out.println("Sum of array is: " + sum);
+
+}
     public static void printElementsOf2dMatrix(){
         int[][] array = new int[4][3];
         array[0][0] = 1;
@@ -58,20 +62,38 @@ public class Main {
       }
   }
 
-  public static void sumOfTheDiagonal(){
-        int[][] array = {
-                {1,2,3,4},
-                {5,6,7,8},
-                {9,10,11,12},
-                {13,14,15,16},
-        };
-                int diagonal = array[0][0] + array[1][1] + array[2][2] + array[3][3];
-                System.out.println(diagonal);
+  public static void sumOfTheDiagonal() {
+      int[][] array = {
+              {1, 2, 3, 4},
+              {5, 6, 7, 8},
+              {9, 10, 11, 12},
+              {13, 14, 15, 16},
+      };
+      int sum = 0;
+      for (int i = 0; i < array.length; i++) {
+          sum = sum += array[i][i];
+      }
+      System.out.println("The sum of the diagonal is: " + sum);
+  }
 
-        }
+  public static void validatePalindrome(){
+        String word = "anna";
+        String reverse = "";
+        boolean isPalindrome = false;
+      for (int i = word.length() - 1; i >= 0; i--) {
+          reverse = reverse + word.charAt(i);
+      }
 
+      // Checking if both the strings are equal
+      if (word.equals(reverse)) {
+          isPalindrome = true;
+      }
 
+      System.out.println("The String is palindrome: " + isPalindrome);
+  }
 }
+
+
 
 
 
